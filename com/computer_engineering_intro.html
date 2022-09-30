@@ -1,0 +1,133 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+   li { list-style:none; }
+  .picture { list-style:none; padding:0; margin:0; }
+  .picture li { float:left; width:50%;}
+  .picture li a {display:block; margin:5px; border: 1px }
+  .picture li img { display:block; width:50%;  height:auto;}
+  .picture li img:hover { display:block; width:100%;  height:auto;} 
+</style>
+</head>
+
+<body>
+<div data-theme="b">
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b">
+			<h1>경성대학교 컴퓨터공학과 소개 앱</h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+				<img src="cengineering.jpeg" >
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#intro">컴퓨터공학과 소개</a></li>
+				<li><a href="#movie" data-rel="dialog">컴퓨터공학과 홍보 영상</a></li>
+				<li><a href="#wizard3-1" data-rel="dialog">컴퓨터공학과 사이트</a></li>
+				<li><a href="#gallery">컴퓨터공학과 갤러리</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>컴퓨터공학과_천은진</h1>
+		</div>
+	</div>
+	
+	<div data-role="page" id="intro" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>			
+			<h1>컴퓨터공학과 소개</h1>
+		</div>
+		<div data-role="content">
+				<div  style="text-align:center">
+					<img src="cengineering.jpeg">
+				</div>			
+			<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>컴퓨터공학과 개요</h3>
+					<p>현대 지식·정보화 사회의 근간이 되는 컴퓨터 하드웨어 및 소프트웨어의 이론·운용·응용 교육을 통해 창의적 실무형 전문 인력을 양성합니다.
+						이를 위해 심도 있는 이론 교육·실험 실습 및 팀 프로젝트 활동과 취업을 위한 인턴십을 정규 교과과정에서 실시하고, 교수별 학부생 중심의 연구실을 운영하여 특강·연구 세미나 및 소그룹지도를 병행합니다.
+					</p>
+				</div>
+				<div data-role="collapsible">
+					<h3>전공과목 소개</h3>
+					<p>C · 자바 프로그래밍언어, 자료구조, 운영체제, 컴파일러, 데이터베이스, 컴퓨터구조, 컴퓨터네트워크 등 컴퓨터공학의 기초 및 공통 과목에 대한 폭넓은 지식을 교육한다.</br>
+						세부 전공으로 임베디드 소프트웨어, 임베디드 운영체제, 마이크로프로세서, 데이터통신 등 임베디드 시스템 및 네트워크ㆍ통신 분야에 특화된 교육을 실시하며, 웹ㆍ스크립트 프로그래밍, 인공지능, 정보보안, 정보검색 등 인터넷과 지능형 소프트웨어 분야에 특화된 교육을 실시한다.
+					</p>
+				</div>
+				<div data-role="collapsible" >
+					<h3>향후 진로</h3>
+					<p> 본 학과 졸업생은 정보처리기사, 정보처리기능사 등의 국가자격증을 취득하여 사회로 진출할 수 있으며 병역특례의 혜택도 얻을 수 있다.</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>컴퓨터공학과_천은진</h1>
+		</div>		
+	</div>
+	
+	<div data-role="page" id="movie" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>컴퓨터공학과 홍보 영상</h1>
+		</div>
+		<div data-role="content" >
+			<div class="ui-bar ui-bar-a">컴퓨터공학과 홍보 영상</div><br/>
+			<li><iframe width="100%" height="240" src="computere.mp4"></iframe></li><br/>			
+		</div>
+		<div data-role="footer" data-theme="b">
+		</div>
+	</div>
+	
+	<div data-role="page" id="wizard3-1">
+		<div data-role="header">
+			<h1>컴퓨터공학과 사이트</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">컴퓨터공학과 공식 홈페이지</div><br/>
+			<iframe src="https://kscms.ks.ac.kr/computer/Main.do" height="500" width="450"></iframe>	
+		</div>
+		<div data-role="footer">
+			<a href="#home"  data-direction="reverse">이전</a>
+			<a href="#wizard3-2" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="wizard3-2">
+		<div data-role="header">
+			<h1>컴퓨터공학과 페이스북 페이지</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">이미지를 누르면 컴퓨터공학과 페이스북 페이지로 이동</div><br/>
+			<a href = "https://www.facebook.com/KSU.DeptCom/"><img src="logo.jpeg" height = "450" width="450"/></a>
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-1"  data-direction="reverse">이전</a>
+			<a href="#home">처음</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="gallery"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>2022 컴퓨터공학과 갤러리</h1>
+		</div>
+		<div data-role="content">
+            <ul class="picture">
+				<li><a href="4-1.jpeg" rel="external"><img src="4-1.jpeg" /></a></li>	
+				<li><a href="4-2.jpeg" rel="external"><img src="4-2.jpeg" /></a></li>	
+				<li><a href="4-3.jpeg" rel="external"><img src="4-3.jpeg" /></a></li>	
+				<li><a href="4-4.jpeg" rel="external"><img src="4-4.jpeg" /></a></li>	
+				<li><a href="4-5.jpeg" rel="external"><img src="4-5.jpeg" /></a></li>	
+            </ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>컴퓨터공학과_천은진</h1>
+		</div>		
+	</div>
+</div>	
+</body>
+</html>
